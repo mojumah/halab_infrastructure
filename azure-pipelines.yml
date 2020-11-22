@@ -26,6 +26,6 @@ steps:
   inputs:
     awsCredentials: 'AWS'
     regionName: 'eu-west-2'
-    awsCommand: 'aws s3'
+    awsCommand: 's3'
     awsSubCommand: 'ls'
   displayName: 'Run a multi-line script'
