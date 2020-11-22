@@ -9,5 +9,10 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
-    echo install aws cli
+    echo set env variables for aws cli
+    export AWS_ACCESS_KEY_ID=$(AWS.AccessKeyID)
+    export AWS_SECRET_ACCESS_KEY=$(AWS.SecretAccessKey)
+    curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+    unzip awscliv2.zip
+    sudo ./aws/install
   displayName: 'Run a multi-line script'
