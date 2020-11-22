@@ -16,4 +16,5 @@ steps:
     unzip awscliv2.zip
     sudo ./aws/install
     aws --version
+    aws s3 ls
   displayName: 'Run a multi-line script'
