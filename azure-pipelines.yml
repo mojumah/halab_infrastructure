@@ -16,5 +16,7 @@ steps:
     unzip awscliv2.zip
     sudo ./aws/install
     aws --version
-    aws s3 ls
+    echo $(AWS.AccessKeyID)
+    aws configure set aws_access_key_id $(AWS.AccessKeyID)
+    aws configure set aws_secret_access_key $(AWS.SecretAccessKey)
   displayName: 'Run a multi-line script'
