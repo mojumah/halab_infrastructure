@@ -6,6 +6,7 @@ pool:
 
 steps:
 - script: echo Hello, world!
+
   displayName: 'Run a one-line script'
 
 - script: |
@@ -21,5 +22,10 @@ steps:
     aws configure set aws_access_key_id $(AWS.AccessKeyID)
     aws configure set aws_secret_access_key $(AWS.SecretAccessKey)
     aws help
-    aws s3 ls
+- task: AWSCLI@1
+  inputs:
+    awsCredentials: 'AWS'
+    regionName: 'eu-west-2'
+    awsCommand: 'aws s3'
+    awsSubCommand: 'ls'
   displayName: 'Run a multi-line script'
