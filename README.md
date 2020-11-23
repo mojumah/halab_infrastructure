@@ -1,1 +1,2 @@
 # halab_infrastructure
+[![Build Status](https://dev.azure.com/jumahmohammad/halab_infrastructure/_apis/build/status/mojumah.halab_infrastructure?branchName=main)](https://dev.azure.com/jumahmohammad/halab_infrastructure/_build/latest?definitionId=2&branchName=main)
