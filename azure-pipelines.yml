@@ -28,3 +28,12 @@ steps:
     bucketName: 'cf-for-cake-halab-info'
     sourceFolder: 'CloudFormation'
     globExpressions: 's3_bucket.yml'
+
+- task: CloudFormationCreateOrUpdateStack@1
+  inputs:
+    awsCredentials: 'AWS'
+    regionName: 'eu-west-2'
+    stackName: 'cf-for-cake-halab-info-stack'
+    templateSource: 's3'
+    s3BucketName: 'cf-for-cake-halab-info'
+    s3ObjectKey: 's3_bucket.yml'
