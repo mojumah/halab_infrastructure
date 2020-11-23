@@ -26,4 +26,5 @@ steps:
     awsCredentials: 'AWS'
     regionName: 'eu-west-2'
     bucketName: 'cf-for-cake-halab-info'
-    globExpressions: '**'
+    sourceFolder: 'CloudFormation'
+    globExpressions: 's3_bucket.yml'
