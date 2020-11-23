@@ -17,6 +17,13 @@ steps:
   inputs:
     awsCredentials: 'AWS'
     regionName: 'eu-west-2'
-    awsCommand: 's3'
-    awsSubCommand: 'ls'
-  displayName: 'Run a multi-line script'
+    awsCommand: 's3api'
+    awsSubCommand: 'create-bucket'
+    awsArguments: 'cf-for-cake-halab-info'
+    
+- task: S3Upload@1
+  inputs:
+    awsCredentials: 'AWS'
+    regionName: 'eu-west-2'
+    bucketName: 'cf-for-cake-halab-info'
+    globExpressions: '**'
