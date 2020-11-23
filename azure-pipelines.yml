@@ -17,9 +17,9 @@ steps:
   inputs:
     awsCredentials: 'AWS'
     regionName: 'eu-west-2'
-    awsCommand: 's3api'
-    awsSubCommand: 'create-bucket'
-    awsArguments: 'cf-for-cake-halab-info'
+    awsCommand: 's3'
+    awsSubCommand: 'mb'
+    awsArguments: 's3://cf-for-cake-halab-info'
     
 - task: S3Upload@1
   inputs:
