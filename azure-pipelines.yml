@@ -37,3 +37,11 @@ steps:
     templateSource: 's3'
     s3BucketName: 'cf-for-cake-halab-info'
     s3ObjectKey: 's3_bucket.yml'
+
+- task: S3Upload@1
+  inputs:
+    awsCredentials: 'AWS'
+    regionName: 'eu-west-2'
+    bucketName: 'cake.halab.info'
+    sourceFolder: 'FE'
+    globExpressions: 'cake.html'
