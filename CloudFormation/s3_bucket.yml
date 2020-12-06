@@ -3,6 +3,7 @@ Resources:
   S3Bucket:
     Type: AWS::S3::Bucket
     Properties:
+      BucketName: cake.halab.info
       AccessControl: PublicRead
       WebsiteConfiguration:
         IndexDocument: cake.html
