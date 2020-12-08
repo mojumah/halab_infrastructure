@@ -1,7 +1,7 @@
 pipeline {
     agent {
         node {
-            label 'jenkins'
+            label 'master'
         }
     }
     environment {
@@ -15,4 +15,5 @@ pipeline {
             }
         }
     }
+
 }
