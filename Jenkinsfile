@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Example stage 1') {
             steps {
-                echo 'hello'
+                aws --version
             }
         }
     }
