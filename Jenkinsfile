@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('hello AWS') {
             steps {
-                withAWS(credentials: 'id', credentials: 'secret') {
+                withAWS(credentials: 'id') {
                     sh 'aws s3 ls'
 
                 }
