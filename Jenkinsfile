@@ -1,14 +1,12 @@
 pipeline {
     agent any
-
-    environment {
-        AWS_ACCESS_KEY_ID     = credentials('jenkins-aws-secret-key-id')
-        AWS_SECRET_ACCESS_KEY = credentials('jenkins-aws-secret-access-key')
-    }
     stages {
-        stage('Example stage 1') {
+        stage('hello AWS') {
             steps {
-                sh 'aws s3 ls'
+                withAWS(credentials: 'aws-credentials', region: 'us-east-1') {
+                    sh 'aws s3 ls'
+
+                }
             }
         }
     }
