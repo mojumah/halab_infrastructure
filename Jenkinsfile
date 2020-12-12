@@ -1,13 +1,12 @@
 pipeline {
-    agent any
-    stages {
-        stage('hello AWS from Jenkins test') {
-            steps {
-                withAWS(credentials: 'aws-key') {
-                    sh 'aws s3 ls'
-
-                }
-            }
-        }
+agent any
+stages {
+    stage('S3download') {
+      steps {
+    withAWS(credentials:'aws-key') {
+        s3Download(file: 'index.html', bucket: 'yasminsalon', path: '/home/ubuntu/')
+      }
     }
+    }
+}
 }
