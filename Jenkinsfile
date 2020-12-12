@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('hello AWS') {
+        stage('hello AWS from Jenkins') {
             steps {
                 withAWS(credentials: 'id') {
                     sh 'aws s3 ls'
