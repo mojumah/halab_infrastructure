@@ -1,9 +1,9 @@
 pipeline {
 agent any
 stages {
-    stage('S3Upload') {
+    stage('S3Sync') {
       steps {
-          sh 'aws --version'
+          sh 'aws s3 sync . s3://yasminsalon.com'
       }
     }
     }
