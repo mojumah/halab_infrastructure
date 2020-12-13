@@ -17,7 +17,7 @@ Content type application/json
 2- Install AWS Steps plugin  
 3- Create pipeline in Jenkins using Git, Poll SCM, GitHub Repo.  
 # To do:
-First fix the but, this command is for s3 upload and does not do sync. So for example if a file is renamed or deleted the pipeline will not remove that file.  
+First fix the bug, this command is for s3 upload and does not do a sync. So for example, if a file is renamed or deleted the pipeline will not remove that file.  
 1- Using Jenkins UI install BitBucket integration plugin  
 2- Test SCM integration with a test Private BitBucket Repo  
 3- Test S3 sync to a test S3 bucket  
