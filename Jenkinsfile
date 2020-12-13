@@ -4,7 +4,7 @@ stages {
     stage('S3download') {
       steps {
     withAWS(credentials:'aws-key') {
-        s3Upload(file:'FE', bucket:'yasminsalon.com', includePathPattern:'**/*')
+        s3Upload(bucket:'yasminsalon.com', includePathPattern:'**/*')
       }
     }
     }
